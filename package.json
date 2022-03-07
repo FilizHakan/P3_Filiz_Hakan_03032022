@@ -1,0 +1,13 @@
+{
+    "name": "P3_Filiz_Hakan_03032022",
+    "version": "1.0.0",
+    "description": "Case Study 3 Ohmyfood",
+    "main": "index.js",
+    "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+},
+    "author": "Filiz Hakan",
+    "license": "ISC",
+    "browserslist": "last 4 versions"
+}
