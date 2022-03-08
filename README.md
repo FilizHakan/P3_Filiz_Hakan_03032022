@@ -8,6 +8,6 @@ Objectives : Create a mobile first website application Implement advanced CSS ef
 
 Sources : Brief Maquette
 
-Github Page : Ohmyfood - Preview - Coming Soon
+Github Page : Ohmyfood - Preview - https://filizhakan.github.io/P3_Filiz_Hakan_03032022/
 
 Author : Filiz Hakan
