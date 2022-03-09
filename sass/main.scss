@@ -1,18 +1,11 @@
 /*Dossier utils/variables*/
 
-/* BREAKPOINTS: MEDIA QUERIES */
-$breakpoints: (
-    small: 320px,
-    middle: 768px,
-    large: 1024px
-)
-
 /*COLORS*/
 $color-primary: #9356DC;
-  $color-secondary: #FF79DA;
-  $color-tertiary: #99E2D0;
-  $all-padding: 1rem;
-  $color-white:#ffff;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$all-padding: 1rem;
+$color-white:#ffff;
 
 /*FONTS*/
 $title-font: 'Shrikhand', sans-serif;
@@ -24,8 +17,6 @@ $box-shade:0 4px 9px -7px rgba(0,0,0,0.7);
 $button-shade:0px 3px 22px -5px #00000078;
 
 $button-shade-hover:0px 7px 15px 0px #0000003b;
-
-
 
 /*Dossier base/site-base*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
