@@ -1,22 +1,4 @@
-/*Dossier utils/variables*/
-
-/*COLORS*/
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$all-padding: 1rem;
-$color-white:#ffff;
-
-/*FONTS*/
-$title-font: 'Shrikhand', sans-serif;
-$content-font: 'roboto', sans-serif;
-
-/*SHADOWS*/
-$head-shade: inset 0 4px 9px -7px rgba(0,0,0,0.7);
-$box-shade:0 4px 9px -7px rgba(0,0,0,0.7);
-$button-shade:0px 3px 22px -5px #00000078;
-
-$button-shade-hover:0px 7px 15px 0px #0000003b;
+@import "./utils/variables";
 
 /*Dossier base/site-base*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
@@ -56,7 +38,7 @@ $button-shade-hover:0px 7px 15px 0px #0000003b;
 
   /* FOOTER */
   .footer {
-    background-color: #353535;
+    background-color: $color-bd-footer;
     margin-top: 0;
     margin-bottom: 0;
 
