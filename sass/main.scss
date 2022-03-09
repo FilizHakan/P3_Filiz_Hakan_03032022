@@ -1,3 +1,33 @@
+/*Dossier utils/variables*/
+
+/* BREAKPOINTS: MEDIA QUERIES */
+$breakpoints: (
+    small: 320px,
+    middle: 768px,
+    large: 1024px
+)
+
+/*COLORS*/
+$color-primary: #9356DC;
+  $color-secondary: #FF79DA;
+  $color-tertiary: #99E2D0;
+  $all-padding: 1rem;
+  $color-white:#ffff;
+
+/*FONTS*/
+$title-font: 'Shrikhand', sans-serif;
+$content-font: 'roboto', sans-serif;
+
+/*SHADOWS*/
+$head-shade: inset 0 4px 9px -7px rgba(0,0,0,0.7);
+$box-shade:0 4px 9px -7px rgba(0,0,0,0.7);
+$button-shade:0px 3px 22px -5px #00000078;
+
+$button-shade-hover:0px 7px 15px 0px #0000003b;
+
+
+
+/*Dossier base/site-base*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
 /* BOX-SIZING PROPERTY */
@@ -10,15 +40,10 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: $content-font, sans-serif;
     scroll-behavior: smooth;
-    background-color: #ffffff;
+    background-color: $color-white;
   }
-
-  $color-primary: #9356DC;
-  $color-secondary: #FF79DA;
-  $color-tertiary: #99E2D0;
-  $all-padding: 1rem;
 
   /* HEADER */
   header {
@@ -30,7 +55,7 @@
     text-align: center;
   
     h1 {
-      font-family: "Shrikhand", "cursive";
+      font-family: $title-font, "cursive";
       margin: 0;
       text-align: center;
       height: 1.9rem;
@@ -41,17 +66,19 @@
   /* FOOTER */
   .footer {
     background-color: #353535;
-    display: flex;
-    flex-direction: column;
-    padding: $all-padding;
     margin-top: 0;
     margin-bottom: 0;
 
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      padding: $all-padding;
+    }
+
     &__logo {
     color: white;
-    font-family: "Shrikhand", "cursive";
-    margin: 0.5rem 0;
-    padding: 0;
+    font-family: $title-font, "cursive";
+    padding: $all-padding;
     font-size: 1.5rem;
     }
 
@@ -62,7 +89,7 @@
     }
 
     &__link {
-      color: white;
+      color: $color-white;
       text-decoration: none;
 
       &:hover {
@@ -71,12 +98,34 @@
     }
 
     &__icon {
-      width: 1.5rem;
-      margin-right: 0.5rem;
+      width: 1.2rem;
+      margin-right: 0.6rem;
     }
-
-
   }
+
+  .flex-container {
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+  }
+
+h3 {
+  font-size: 1.15rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+
+
+
+
 
 
   
