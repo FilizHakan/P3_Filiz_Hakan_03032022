@@ -71,7 +71,11 @@
     margin: auto;
     position: relative;
   }
-
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
 h3 {
   font-size: 1.5rem;
 }

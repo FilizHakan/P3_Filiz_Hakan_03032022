@@ -67,8 +67,94 @@
     background-color: $color-bd-light;
     margin-bottom: 50px;
     padding: 2rem 1rem;
+    background: $color-bd-light;
 
     &__title {
-    padding: $all-padding;  
+    padding: $all-padding 0;  
     }
 }
+
+.menu-cards {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.card {
+    border-radius: 2rem;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-top: 1rem;
+
+    &__img {
+        height: 12rem;
+        width: 100%;
+        border: 0 solid transparent;
+        box-shadow: none;
+        object-fit: cover;
+    }
+
+    .label::after {
+        display: block;
+        content: "Nouveau";
+        color: #278870;
+        position: absolute;
+        top: 14px;
+        right: 12px;
+        border-radius: .125rem;
+        background-color: #99E2D0;
+        padding: 7px 12px;
+        font-family: $content-font;
+        font-size: .85em;
+        box-shadow: 0 4px 9px -7px rgb(0, 0, 0, 0.7);
+    }
+
+    &__title {
+        margin: 0;
+    }
+
+    &__footer {
+        padding: .5rem $all-padding;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: $color-white;
+    }
+
+    &__content {
+        padding: $all-padding;
+        position: relative;
+        align-items: center;
+        background-color: $color-white;
+        flex: 1;
+    }
+
+    &__btn {
+        height: 2rem;
+        position: relative;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        display: flex;
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__heart {
+        font-size: 28px;
+        color:rgb(0, 0, 0, 0.6);
+        font-weight: 300;
+        transition-duration: .25s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+

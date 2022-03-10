@@ -79,6 +79,12 @@ body, html {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
 h3 {
   font-size: 1.5rem;
 }
@@ -276,9 +282,86 @@ input::placeholder {
   background-color: #f6f6f6;
   margin-bottom: 50px;
   padding: 2rem 1rem;
+  background: #f6f6f6;
 }
 .menus__title {
+  padding: 1rem 0;
+}
+
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.card {
+  border-radius: 2rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin-top: 1rem;
+}
+.card__img {
+  height: 12rem;
+  width: 100%;
+  border: 0 solid transparent;
+  box-shadow: none;
+  object-fit: cover;
+}
+.card .label::after {
+  display: block;
+  content: "Nouveau";
+  color: #278870;
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  border-radius: 0.125rem;
+  background-color: #99E2D0;
+  padding: 7px 12px;
+  font-family: "roboto", sans-serif;
+  font-size: 0.85em;
+  box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
+}
+.card__title {
+  margin: 0;
+}
+.card__footer {
+  padding: 0.5rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #ffff;
+}
+.card__content {
   padding: 1rem;
+  position: relative;
+  align-items: center;
+  background-color: #ffff;
+  flex: 1;
+}
+.card__btn {
+  height: 2rem;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.card__heart {
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 300;
+  transition-duration: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
