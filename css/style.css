@@ -311,6 +311,7 @@ input::placeholder {
   color: inherit;
   display: block;
   margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 .card__img {
   height: 12rem;

@@ -88,28 +88,11 @@
     margin-top: 1rem;
 
     &__img {
-        height: 12rem;
-        width: 100%;
-        border: 0 solid transparent;
-        box-shadow: none;
-        object-fit: cover;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
+        @include card-img;
     }
 
     .label::after {
-        display: block;
-        content: "Nouveau";
-        color: #278870;
-        position: absolute;
-        top: 14px;
-        right: 12px;
-        border-radius: .125rem;
-        background-color: #99E2D0;
-        padding: 7px 12px;
-        font-family: $content-font;
-        font-size: .85em;
-        box-shadow: 0 4px 9px -7px rgb(0, 0, 0, 0.7);
+        @include label-new;
     }
 
     &__title {
@@ -124,7 +107,6 @@
         background-color: $color-white;
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
-
     }
 
     &__content {
@@ -136,25 +118,11 @@
     }
 
     &__btn {
-        height: 2rem;
-        position: relative;
-        align-items: center;
-        cursor: pointer;
-        justify-content: center;
-        display: flex;
-        right:30px;
-        bottom:0px;
+        @include card-btn;
     }
 
     &__heart {
-        font-size: 28px;
-        color:rgb(0, 0, 0, 0.6);
-        font-weight: 300;
-        transition-duration: .25s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
+        @include card-heart;
     }
 }
 
