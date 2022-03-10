@@ -1,30 +1,43 @@
 /*COLORS*/
+/*GRAPHIC CHARTER AND VARIANTS COLORS*/
 $color-primary: #9356DC;
 $color-primary-lighten: lighten($color-primary, 35%);
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-tertiary-dark:darken($color-tertiary, 40%);
-$all-padding: 1rem;
-$color-white:#ffff;
-$color-bd-footer: #353535;
-$color-icon:grey;
-$color-bd-light:#f6f6f6;
-$color-bd-dark:#eaeaea;
 
-/*COLOR GRADIENTS*/
+/*ICON AND WHITE COLORS*/
+$color-white:#ffff;
+$color-icon:grey;
+
+/*BACKGROUND COLORS*/
+$color-bd-footer: #353535;
+$color-bd-light:#f6f6f6;
+$color-bd-dark:#f3f3f3;
+$search-bd: #eaeaea;
+
+/*GRADIENT COLORS*/
 $gradient:linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 $gradient-brighter:linear-gradient(350deg, #9356dc 0%, #ff79da 80%);
 
-
-/*FONTS*/
+/*FONT FAMILIES*/
 $title-font: 'Shrikhand', sans-serif;
 $content-font: 'roboto', sans-serif;
 
 /*FONT SIZE AND WEIGHT*/
 $header-size: 1.7rem;
 
-/*SHADOWS*/
+/*BUTTON & HOVER SHADOWS*/
 $shadow-button:0px 3px 22px -5px #00000078;
 $shadow-button-hover:0px 7px 15px 0px #0000003b;
+
+/*HEADING SHADOWS*/
 $shadow-heading: inset 0 4px 9px -7px rgba(0,0,0,0.7);
-$shadow-box:0 4px 9px -7px rgba(0,0,0,0.7);
+
+/*BOX SHADOWS*/
+$shadow-box:0 0 0.5rem rgba(0,0,0,0.25);
+$shadow-box-hover: 0 0 0.5rem rgba(0,0,0,0.5);
+
+/*GENERAL APPLIED PADDING ACROSS SITE*/
+$all-padding: 1rem;
+

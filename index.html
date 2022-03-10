@@ -32,58 +32,54 @@
 
     <body>
         <!--Logo-->
-        <header>
-            <h1>Ohmyfood</h1>
+        <header class="header">
+            <h1 class="header__logo">Ohmyfood</h1>
         </header>
         
         <main>
             <!--Section Search-->
-            <section id="search">
-                <div class="maps">
-                    <span>
-                        <i class="fas fa-map-marker-alt maps__icon"></i>
-                    </span>
-                    <span class="maps__search">
-                        <input type="search" name="city" value=" Paris, Belleville" placeholder="Votre ville">
-                    </span>
-                </div>
-                <div class="slogan">
-                    <h2>Réservez le menu qui vous convient</h2>
-                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <section>
+                <form class="maps">
+                    <i class="fas fa-map-marker-alt"></i>
+                        <input type="search" name="city" value="Paris, Belleville" placeholder="Tapez votre ville">
+                        <input type="submit" class="" hidden>
+                </form>
+            </section>
+            <!--Section Slogan-->
+            <section class="slogan">
+                    <h2 class="slogan__title">Réservez le menu qui vous convient</h2>
+                    <p class="slogan__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
                     <span>
                         <button class="slogan__btn">Explorer nos restaurants</button>
                     </span>
-                </div>
+                </section>
             </section>
 
             <!--Section Steps-->
-            <section id="steps">
+            <section class="steps">
                 <div class="flex-container">
-                    <h3>Fonctionnement</h3>
+                    <h3 class="steps__title">Fonctionnement</h3>
                     <ul class="steps__item">
-                        <li>
-                            <div class="steps__number">1</div>
-                            <div class="steps__icon"><i class="fas fa-mobile-alt fa-lg"></i></div>
-                            <p>Choisissez un restaurant</p>
+                        <li class="steps__lists">
+                            <i class="fas fa-mobile-alt steps__icon"></i>
+                            <span class="steps__subtitle">Choisissez un restaurant</span>
                         </li>
-                        <li>
-                            <div class="steps__number">2</div>
-                            <div class="steps__icon"><i class="fas fa-list"></i></div>
-                            <p>Composez votre menu</p>
+                        <li class="steps__lists">
+                            <i class="fas fa-list steps__icon"></i>
+                            <span class="steps__subtitle">Composez votre menu</span>
                         </li>
-                        <li>
-                            <div class="steps__number">3</div>
-                            <div class="steps__icon"><i class="fas fa-store"></i></div>
-                            <p>Dégustez au restaurant</p>
+                        <li class="steps__lists">
+                            <i class="fas fa-store steps__icon"></i>
+                            <span class="steps__subtitle">Dégustez au restaurant</span>
                         </li>
                     </ul>
                 </div>
             </section>
 
             <!--Section Menus Restaurants-->
-            <section id="menus_restaurant">
+            <section class="menus_restaurant">
                 <div class="flex-container">
-                    <h3 class="restaurants__title">Restaurants</h3>
+                    <h3 class="menus__title">Restaurants</h3>
                         
                     <div class="menu__cards">
 

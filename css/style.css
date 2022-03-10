@@ -1,15 +1,21 @@
 /*COLORS*/
-/*COLOR GRADIENTS*/
-/*FONTS*/
+/*GRAPHIC CHARTER AND VARIANTS COLORS*/
+/*ICON AND WHITE COLORS*/
+/*BACKGROUND COLORS*/
+/*GRADIENT COLORS*/
+/*FONT FAMILIES*/
 /*FONT SIZE AND WEIGHT*/
-/*SHADOWS*/
-/*Dossier base/site-base*/
+/*BUTTON & HOVER SHADOWS*/
+/*HEADING SHADOWS*/
+/*BOX SHADOWS*/
+/*GENERAL APPLIED PADDING ACROSS SITE*/
+/*MEDIA QUERIES MIXINS*/
+/*FONTS PROPERTY MIXINS*/
+/***HOME PAGE MIXINS***/
+/***SECTION STEPS MIXINS***/
+/***BUTTON "Explorer nos restaurants" + "Commander" MIXINS***/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 /* BOX-SIZING PROPERTY */
-* {
-  box-sizing: border-box;
-}
-
 body, html {
   margin: 0;
   padding: 0;
@@ -20,20 +26,17 @@ body, html {
 }
 
 /* HEADER */
-header {
-  padding: 2rem 1rem;
+.header {
+  padding: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
+  position: relative;
+  z-index: 10;
   text-align: center;
 }
-header h1 {
+.header__logo {
   font-family: "Shrikhand", sans-serif, "cursive";
   margin: 0;
   text-align: center;
-  height: 1.9rem;
-  display: block;
 }
 
 /* FOOTER */
@@ -63,7 +66,7 @@ header h1 {
   text-decoration: none;
 }
 .footer__link:hover {
-  color: #FF79DA;
+  text-decoration: underline;
 }
 .footer__icon {
   width: 1.2rem;
@@ -71,13 +74,13 @@ header h1 {
 }
 
 .flex-container {
-  max-width: 1440px;
+  max-width: 1280px;
   margin: auto;
   position: relative;
 }
 
 h3 {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
 }
 
 h4 {
@@ -87,6 +90,195 @@ h4 {
 p {
   font-size: 1.1rem;
   font-weight: 300;
+}
+
+h2, h3, h4, p, span, a, li, button, ::placeholder {
+  font-family: "roboto", sans-serif, sans-serif;
+  color: black;
+}
+
+section {
+  display: block;
+}
+
+/*BUILT-IN SASS MODULE, GENERATE COLORS BASED ON EXISTING ONES*/
+button {
+  align-self: center;
+  width: fit-content;
+  margin: 15px 0 38px 0;
+  cursor: pointer;
+  background-color: #686868;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  transition-duration: 0.25s;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9) 0%, rgba(255, 121, 218, 0.9) 100%);
+}
+button:hover {
+  background-color: #ffff;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.maps {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: #eaeaea;
+}
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .maps {
+    box-shadow: unset;
+  }
+}
+@media screen and (min-width: 961px) {
+  .maps {
+    background-color: #f3f3f3;
+    padding: 1.25rem 1rem;
+  }
+}
+.maps input {
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  background-color: #eaeaea;
+  padding: 0 7px;
+  width: 150px;
+}
+@media screen and (min-width: 961px) {
+  .maps input {
+    background-color: #f3f3f3;
+  }
+}
+.maps input:focus {
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #353535;
+  background-color: #f3f3f3;
+}
+.maps input:focus::placeholder {
+  opacity: 0;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+.maps input:focus::placeholder:hover {
+  opacity: 25%;
+  transition-duration: 0.35s;
+}
+.maps i {
+  margin-right: 1rem;
+  vertical-align: 0.2rem;
+  font-size: 1rem;
+  color: #353535;
+}
+@media screen and (min-width: 961px) {
+  .maps i {
+    color: #9356DC;
+    font-size: 1.2rem;
+    vertical-align: 1rem;
+  }
+}
+
+input::placeholder {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #353535;
+  transition: opacity 0.37s ease-in-out;
+}
+
+/*SECTION SLOGAN*/
+.slogan {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+@media screen and (min-width: 961px) {
+  .slogan {
+    background-color: #ffff;
+  }
+}
+.slogan__title {
+  margin: 0;
+}
+.slogan__subtitle {
+  font-weight: 300;
+  margin: 1.5rem 0;
+}
+
+/*SECTION STEPS*/
+.steps {
+  margin-bottom: 50px;
+  padding: 2rem 1rem;
+}
+.steps__title {
+  margin-top: 0;
+}
+.steps__item {
+  margin: 0;
+  padding: 0;
+  counter-reset: compteListe;
+}
+.steps__lists {
+  position: relative;
+  background-color: #f6f6f6;
+  margin: 1.5rem 0 1rem 0.75rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  counter-increment: number;
+  list-style-type: none;
+  transition-duration: 400ms;
+}
+.steps__lists:hover {
+  cursor: pointer;
+  background-color: #f2eafb;
+  box-shadow: 0px 7px 15px 0px #0000003b;
+}
+.steps__lists:hover i {
+  color: #9356DC;
+}
+.steps__lists::before {
+  counter-increment: compteListe 1;
+  content: counter(compteListe) "";
+  background: #9356DC;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  left: -12px;
+  bottom: 21px;
+  display: flex;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+}
+.steps__icon {
+  color: grey;
+  padding: 0 30px 0 10px;
+  font-size: 20px;
+}
+.steps__subtitle {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/*SECTION RESTAURANTS*/
+.menus {
+  background-color: #f6f6f6;
+  margin-bottom: 50px;
+  padding: 2rem 1rem;
+}
+.menus__title {
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

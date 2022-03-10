@@ -1,0 +1,83 @@
+/*MEDIA QUERIES MIXINS*/
+
+@mixin screenMedium {
+    @media screen and (min-width: 768px) and (max-width: 960px) {
+      @content;
+    }
+  }
+  
+  @mixin screenLarge {
+    @media screen and (min-width: 961px) {
+      @content;
+    }
+  } 
+  
+  /*FONTS PROPERTY MIXINS*/
+
+  @mixin boldPara {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $color-bd-footer;
+  }
+
+  /***HOME PAGE MIXINS***/
+
+  /***SECTION STEPS MIXINS***/
+  @mixin steps-hover {
+    cursor: pointer;
+    background-color: $color-primary-lighten;
+    box-shadow: $shadow-button-hover;
+  }
+
+  @mixin steps-lists {
+    position: relative;
+    background-color: $color-bd-light;
+    margin: 1.5rem 0 1rem 0.75rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+    counter-increment: number;
+    list-style-type: none;
+    transition-duration: 400ms;
+  }
+
+  @mixin steps-lists-before {
+    counter-increment: compteListe 1;
+    content: counter(compteListe) "";
+    background: $color-primary;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    left: -12px;
+    bottom: 21px;
+    display: flex;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+  }
+
+  /***BUTTON "Explorer nos restaurants" + "Commander" MIXINS***/
+  @mixin button {
+    align-self: center;
+    width: fit-content;
+    margin: 15px 0 38px 0;
+    cursor: pointer;
+    background-color: rgb(104, 104, 104);
+    position: relative;
+    z-index: 1;
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: white;
+    transition-duration: 0.25s;
+    box-shadow: $shadow-box;
+  }
+
+
+
+
+
+

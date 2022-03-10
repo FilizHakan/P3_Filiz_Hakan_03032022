@@ -1,0 +1,64 @@
+.maps{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: $search-bd;
+    @include screenMedium{
+        box-shadow: unset;
+        
+    }
+    @include screenLarge{
+        background-color: $color-bd-dark;
+        padding: 1.25rem 1rem;
+    }
+
+    input{
+         font-weight: 700;
+         font-size: 16px;
+         border:none;
+         background-color: $search-bd;
+         padding: 0 7px;
+         width: 150px;
+         @include screenLarge{
+         background-color: $color-bd-dark;
+         }
+
+         &:focus{
+             outline: none;
+             @include boldPara;
+             background-color: $color-bd-dark;
+
+         &::placeholder{
+             opacity: 0;
+             font-size: 16px;
+             font-weight: 700;
+             -webkit-transition: opacity 0.35s ease-in-out;
+             transition: opacity 0.35s ease-in-out;
+
+        &:hover{
+             opacity: 25%;
+             transition-duration: 0.35s; 
+                
+         }
+         }
+         }   
+    
+ }
+     i{
+         margin-right: 1rem;
+         vertical-align: 0.2rem;
+         font-size: 1rem;
+         color: $color-bd-footer;
+         @include screenLarge{
+             color: $color-primary;
+             font-size: 1.2rem;
+             vertical-align: 1rem;
+         }
+     }
+ }
+
+ input::placeholder{
+     @include boldPara;
+     transition: opacity 0.37s ease-in-out;
+ }
