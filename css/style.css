@@ -50,10 +50,15 @@ body, html {
   flex-direction: column;
   padding: 1rem;
 }
+@media screen and (min-width: 961px) {
+  .footer .flex-container {
+    align-items: center;
+  }
+}
 .footer__logo {
   color: white;
   font-family: "Shrikhand", sans-serif, "cursive";
-  padding: 1rem;
+  padding: 1rem 0;
   font-size: 1.5rem;
 }
 .footer__item {
@@ -105,6 +110,12 @@ h2, h3, h4, p, span, a, li, button, ::placeholder {
 
 section {
   display: block;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
 }
 
 /*BUILT-IN SASS MODULE, GENERATE COLORS BASED ON EXISTING ONES*/
@@ -222,11 +233,11 @@ input::placeholder {
 
 /*SECTION STEPS*/
 .steps {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   padding: 2rem 1rem;
 }
 .steps__title {
-  margin-top: 0;
+  margin-top: 30px;
 }
 .steps__item {
   margin: 0;
@@ -280,8 +291,7 @@ input::placeholder {
 /*SECTION RESTAURANTS*/
 .menus {
   background-color: #f6f6f6;
-  margin-bottom: 50px;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 5.5rem 1rem;
   background: #f6f6f6;
 }
 .menus__title {
@@ -296,7 +306,6 @@ input::placeholder {
 }
 
 .card {
-  border-radius: 2rem;
   position: relative;
   text-decoration: none;
   color: inherit;
@@ -309,6 +318,8 @@ input::placeholder {
   border: 0 solid transparent;
   box-shadow: none;
   object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 .card .label::after {
   display: block;
@@ -333,6 +344,8 @@ input::placeholder {
   display: flex;
   align-items: center;
   background-color: #ffff;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 .card__content {
   padding: 1rem;
@@ -348,11 +361,8 @@ input::placeholder {
   cursor: pointer;
   justify-content: center;
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  right: 30px;
+  bottom: 0px;
 }
 .card__heart {
   font-size: 28px;
@@ -362,6 +372,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
 }
 
 /*# sourceMappingURL=style.css.map */

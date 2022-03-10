@@ -21,11 +21,11 @@
 
   /*SECTION STEPS*/
   .steps {
-      margin-bottom: 50px;
+      margin-bottom: 25px;
       padding: ($all-padding +1rem) $all-padding;
 
       &__title {
-          margin-top: 0;
+          margin-top: 30px;
       }
 
       &__item {        
@@ -65,8 +65,7 @@
 
 .menus {
     background-color: $color-bd-light;
-    margin-bottom: 50px;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 5.5rem 1rem;
     background: $color-bd-light;
 
     &__title {
@@ -82,7 +81,6 @@
 }
 
 .card {
-    border-radius: 2rem;
     position: relative;
     text-decoration: none;
     color: inherit;
@@ -95,6 +93,8 @@
         border: 0 solid transparent;
         box-shadow: none;
         object-fit: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
     }
 
     .label::after {
@@ -122,6 +122,9 @@
         display: flex;
         align-items: center;
         background-color: $color-white;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
     }
 
     &__content {
@@ -139,11 +142,8 @@
         cursor: pointer;
         justify-content: center;
         display: flex;
-        position: absolute;
-        top:0;
-        left:0;
-        height: 100%;
-        width: 100%;
+        right:30px;
+        bottom:0px;
     }
 
     &__heart {
@@ -154,6 +154,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
     }
 }
 
