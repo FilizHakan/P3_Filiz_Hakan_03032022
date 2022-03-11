@@ -14,6 +14,7 @@
 /***HOME PAGE MIXINS***/
 /***SECTION STEPS MIXINS***/
 /***BUTTON "Explorer nos restaurants" + "Commander" MIXINS***/
+/*** MIXINS***/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 /* BOX-SIZING PROPERTY */
 body, html {
@@ -311,7 +312,6 @@ input::placeholder {
   color: inherit;
   display: block;
   margin-top: 1rem;
-  transition: all 0.3s ease-in-out;
 }
 .card__img {
   height: 12rem;
@@ -374,6 +374,104 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   position: absolute;
+}
+
+.head {
+  display: block;
+  animation: smooth-appearing 750ms backwards;
+  animation-delay: 250ms;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 961px) {
+  .head {
+    margin-top: 1rem;
+  }
+}
+.head__arrow::before {
+  position: absolute;
+  left: 23px;
+  top: 30px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+@media screen and (min-width: 961px) {
+  .head__arrow::before {
+    top: 30px;
+  }
+}
+
+.hero {
+  max-width: 100%;
+  max-height: 600px;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+}
+.hero img {
+  width: 100%;
+  filter: brightness(95%);
+}
+
+.menu {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40px 40px 0 0;
+  overflow: hidden;
+  margin-top: -35px;
+  position: relative;
+  background-color: #f6f6f6;
+}
+.menu__title {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding-left: 20px;
+  position: relative;
+}
+.menu .heart {
+  position: absolute;
+  top: 43px;
+  right: 35px;
+  color: #353535;
+}
+.menu .heart__first {
+  font-size: 1.85rem;
+  transform: scaleY(1.02);
+  position: relative;
+  z-index: 1;
+  font-weight: 100 !important;
+  transition: 400ms;
+  cursor: pointer;
+  color: #353535;
+}
+.menu .heart__first:hover {
+  color: #f6f6f6;
+}
+.menu .heart__first:hover.heart__second {
+  opacity: 1;
+  z-index: 2;
+}
+.menu .heart__second {
+  font-size: 1.35rem;
+  transform: scaleY(1.02);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  font-weight: 900 !important;
+  background: #9356dc;
+  background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
+  opacity: 0;
+  transition: 600ms;
 }
 
 /*# sourceMappingURL=style.css.map */

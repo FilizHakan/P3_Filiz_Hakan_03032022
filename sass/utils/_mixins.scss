@@ -22,6 +22,12 @@
 
   /***HOME PAGE MIXINS***/
 
+  @mixin header-logo {
+    font-family: $title-font, "cursive";
+    margin: 0;
+    text-align: center;
+  }
+
   /***SECTION STEPS MIXINS***/
   @mixin steps-hover {
     cursor: pointer;
