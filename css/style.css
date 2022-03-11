@@ -433,8 +433,8 @@ input::placeholder {
 }
 .menu .heart {
   position: absolute;
-  top: 43px;
-  right: 35px;
+  top: 45px;
+  right: 33px;
   color: #353535;
 }
 .menu .heart__first {

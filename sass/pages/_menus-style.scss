@@ -54,8 +54,8 @@
 
     .heart {
         position: absolute;
-        top: 43px;
-        right: 35px;
+        top: 45px;
+        right: 33px;
         color: $color-bd-footer;
         &__first {
             font-size: 1.85rem;
@@ -121,6 +121,10 @@
             bottom: 0;
         }
     }
+}
+
+.menu__cards {
+
 }
 
 
