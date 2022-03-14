@@ -86,14 +86,16 @@
     color: inherit;
     display: block;
     margin-top: 1rem;
+    box-shadow: $shadow-heading;
+    border-radius: 15px;
 
     &__img {
         @include card-img;
+        .label::after {
+            @include label-new;
+        }
     }
 
-    .label::after {
-        @include label-new;
-    }
 
     &__title {
         margin: 0;

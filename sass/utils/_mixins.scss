@@ -132,7 +132,71 @@
     border-top-right-radius: 1rem;
   }
 
+  /***MENU MIXINS***/
 
+@mixin menu {
+    padding: $all-padding 2rem 0 $all-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px 40px 0 0;
+    overflow: hidden;
+    margin-top: -35px;
+    position: relative;
+    background-color: $color-bd-light;
+}
+
+@mixin heart-first {
+    font-size: 1.85rem;
+    transform: scaleY(1.02);
+    position: relative;
+    z-index: 1;
+    font-weight: 100!important;
+    transition: 400ms;
+    cursor: pointer;
+    color: $color-bd-footer;
+}
+
+@mixin heart-second {
+    font-size: 1.35rem;
+    transform: scaleY(1.02);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    font-weight: 900!important;
+    background: rgb(147,86,220);
+    background: -webkit-linear-gradient(300deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: -1;
+    opacity: 0;
+    transition: 600ms;
+}
+
+@mixin submenu-title {
+    text-transform: uppercase;
+    margin-top: 25px;
+    font-size: 1.17rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+@mixin hero {
+    align-items: center;
+    overflow: hidden;
+    position: relative;   
+    img {
+    max-width: 100%;
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(95%);
+}
 
 
 
