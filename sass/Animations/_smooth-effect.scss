@@ -1,0 +1,43 @@
+/* HOMEPAGE "Ohmyfood" SMOOTH HEADER EFFECT */
+
+.header {
+    animation: smooth-effect 2s backwards;
+    animation-delay: 2.2s; 
+}
+
+/* MENU PAGE "Ohmyfood" & IMAGE HERO SMOOTH HEADER EFFECT */
+.head {
+    animation: smooth-effect 750ms backwards;
+    animation-delay: 250ms;
+}
+
+.hero img {
+    animation: smooth-effect 750ms backwards;
+    animation-delay: 250ms;
+}
+
+.submenu li:nth-child(1n) {
+    animation-delay: .5s;
+}
+
+/* HOMEPAGE & MENUS BODY SMOOTH EFFECT */
+
+.main-section {
+    animation: smooth-effect 1300ms backwards;
+    animation-delay: 2500ms;
+}
+
+.main-section-menu {
+    animation: smooth-effect 1015ms backwards;
+    animation-delay: 250ms;
+  }
+
+@keyframes smooth-effect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+

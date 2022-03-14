@@ -1,11 +1,17 @@
 #menu {
     background-color: $color-bd-light;
     padding-bottom: 50px;
+    @include screenMedium {
+        margin:0;
+        align-self: center;
+    }
+    @include screenXLarge {
+        margin-left: 10rem;
+        margin-right: 10rem; 
+    }
 }
  .head {
     display: block;
-    animation: smooth-appearing 750ms backwards;
-    animation-delay: 250ms;
     margin-top: $all-padding;
     @include screenLarge {
         margin-top: $all-padding;
@@ -27,7 +33,7 @@
 .hero {
     @include hero;
     }
-}
+
 
 .menu {
     @include menu;
@@ -54,7 +60,6 @@
             }}
         }
     
-
         &__second {
             @include heart-second;
         }
@@ -63,6 +68,10 @@
 
 .submenus {
     display: grid;
+    @include screenXLarge {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+      }
 }
 
 .submenu li div:first-child {
@@ -146,17 +155,6 @@
             margin-right: 25px;
     }
     }
-
-}
-
-.submenu li:nth-child(1n) {
-    animation-delay: .2s;
-}
-
-ul {
-    animation: itemAppear .6s;
-    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
-    animation-fill-mode: both;
 
 }
 
