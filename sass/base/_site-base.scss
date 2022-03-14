@@ -29,12 +29,29 @@
     background-color: $color-bd-footer;
     margin-top: 0;
     margin-bottom: 0;
+    & ul {
+      @include screenMedium {
+        align-items: center;
+      }
+      @include screenXLarge {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        & li {
+          margin-right: 40px;
+          border-right: 1px solid $color-bd-light;
+          padding-right: 40px;
+          padding-top: 0;
+          margin-bottom: 80px;
+        }
+      }
+    }
 
     .flex-container {
       display: flex;
       flex-direction: column;
       padding: $all-padding;
-      @include screenLarge {
+      @include screenXLarge {
         align-items: center;
     } 
     }

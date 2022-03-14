@@ -34,9 +34,23 @@
     @include hero;
     }
 
+.menu-cards .card {
+    border-radius: 15px;
+    color: inherit;
+    overflow: hidden;
+    position: relative;
+    box-shadow: $shadow-button-hover;
+    transition-duration: 400ms;
+        &:hover {
+            box-shadow: $shadow-button-hover;
+        }
+    }
 
 .menu {
     @include menu;
+    @include screenXLarge {
+        margin-top: -75px;
+    }
 
     &__title {
         font-family: $title-font;
@@ -98,7 +112,6 @@
 }
 
 .submenu li {
-    width: 348px;
     list-style-type: none;
     display: flex;
     flex-flow: row;

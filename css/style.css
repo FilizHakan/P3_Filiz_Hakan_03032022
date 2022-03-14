@@ -47,12 +47,31 @@ body, html {
   margin-top: 0;
   margin-bottom: 0;
 }
+@media screen and (min-width: 767px) and (max-width: 960px) {
+  .footer ul {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+  }
+  .footer ul li {
+    margin-right: 40px;
+    border-right: 1px solid #f6f6f6;
+    padding-right: 40px;
+    padding-top: 0;
+    margin-bottom: 80px;
+  }
+}
 .footer .flex-container {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
-@media screen and (min-width: 961px) and (max-width: 1023px) {
+@media screen and (min-width: 1024px) {
   .footer .flex-container {
     align-items: center;
   }
@@ -247,7 +266,7 @@ button:hover {
   padding: 20px 0;
   background-color: #eaeaea;
 }
-@media screen and (min-width: 768px) and (max-width: 960px) {
+@media screen and (min-width: 767px) and (max-width: 960px) {
   .maps {
     box-shadow: unset;
   }
@@ -342,6 +361,11 @@ input::placeholder {
   padding: 0;
   counter-reset: compteListe;
 }
+@media screen and (min-width: 1024px) {
+  .steps__item {
+    display: flex;
+  }
+}
 .steps__lists {
   position: relative;
   background-color: #f6f6f6;
@@ -352,6 +376,15 @@ input::placeholder {
   counter-increment: number;
   list-style-type: none;
   transition-duration: 400ms;
+}
+@media screen and (min-width: 1024px) {
+  .steps__lists {
+    flex: 1;
+    margin: 0 0 0 2rem;
+  }
+  .steps__lists:first-child {
+    margin-left: 0.75rem;
+  }
 }
 .steps__lists:hover {
   cursor: pointer;
@@ -388,7 +421,6 @@ input::placeholder {
 
 /*SECTION RESTAURANTS*/
 .menus {
-  background-color: #f6f6f6;
   padding: 2rem 1rem 5.5rem 1rem;
   background: #f6f6f6;
 }
@@ -396,11 +428,16 @@ input::placeholder {
   padding: 1rem 0;
 }
 
-.menu-cards {
+.menu__cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
   row-gap: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .card {
@@ -479,7 +516,7 @@ input::placeholder {
   background-color: #f6f6f6;
   padding-bottom: 50px;
 }
-@media screen and (min-width: 768px) and (max-width: 960px) {
+@media screen and (min-width: 767px) and (max-width: 960px) {
   #menu {
     margin: 0;
     align-self: center;
@@ -526,6 +563,23 @@ input::placeholder {
   object-fit: cover;
   filter: brightness(95%);
 }
+@media screen and (min-width: 1024px) {
+  .hero img {
+    height: 350px;
+  }
+}
+
+.menu-cards .card {
+  border-radius: 15px;
+  color: inherit;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 7px 15px 0px #0000003b;
+  transition-duration: 400ms;
+}
+.menu-cards .card:hover {
+  box-shadow: 0px 7px 15px 0px #0000003b;
+}
 
 .menu {
   padding: 1rem 2rem 0 1rem;
@@ -537,6 +591,11 @@ input::placeholder {
   margin-top: -35px;
   position: relative;
   background-color: #f6f6f6;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    margin-top: -75px;
+  }
 }
 .menu__title {
   font-family: "Shrikhand", sans-serif;
@@ -626,7 +685,6 @@ input::placeholder {
 }
 
 .submenu li {
-  width: 348px;
   list-style-type: none;
   display: flex;
   flex-flow: row;
