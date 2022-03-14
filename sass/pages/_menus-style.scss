@@ -1,5 +1,6 @@
 #menu {
     background-color: $color-bd-light;
+    padding-bottom: 50px;
 }
  .head {
     display: block;
@@ -159,21 +160,37 @@
         overflow: hidden;
         font-size: 1rem;
     }
-    & .price__check p {
-        align-self: flex-end;
-        font-weight: 900;
-        line-height: 1rem;
-        margin-left: 5px;
-        margin-right: 25px;
-    }
-
     & .price__check {
         display: flex;
         flex-flow: row;
-        padding: 0;
-        margin-right: -61px;
+        padding-right: 1rem;
+        margin-right: -100px;
         transition: 500ms;
+        & i {
+            align-self: center;
+            background-color: $color-tertiary;
+            padding: 11px 4px;
+            &:before {
+                font-size: 1.05rem;
+                color:$color-white;
+                display: inline-block;
+                margin: 0 15px;
+                border-radius: 100px;
+            }
+            &:hover {
+                transform: rotate(-1turn);
+                transition-duration: 0.5ms;
+            }
+        }
+        & p {
+            align-self: flex-end;
+            font-weight: 700;
+            line-height: 1rem;
+            margin-left: 5px;
+            margin-right: 25px;
     }
+    }
+
 }
 
 .submenu li:nth-child(1n) {
@@ -185,6 +202,13 @@ ul {
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
     animation-fill-mode: both;
 
+}
+
+.menu__button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 }
 
 
