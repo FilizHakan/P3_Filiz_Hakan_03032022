@@ -1,4 +1,6 @@
-
+#menu {
+    background-color: $color-bd-light;
+}
  .head {
     display: block;
     animation: smooth-appearing 750ms backwards;
@@ -22,14 +24,14 @@
 }
 
 .hero {
-    max-width: 100%;
-    max-height: 400px;
     align-items: center;
     overflow: hidden;
-    position: relative;
-    object-fit: cover;
+    position: relative;   
     img {
+    max-width: 100%;
+    max-height: 400px;
     width: 100%;
+    object-fit: cover;
     filter: brightness(95%);
     }
 }
@@ -101,12 +103,18 @@
     display: grid;
 }
 
+.submenu li div:first-child {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .submenu {
     max-width: 100%;
     overflow: hidden;
     padding: 0 $all-padding;
     &__title {
         text-transform: uppercase;
+        margin-top: 25px;
         font-size: 1.17rem;
         position: relative;
         padding-bottom: 0.5rem;
@@ -123,7 +131,44 @@
     }
 }
 
-.menu__cards {
+.submenu li {
+    width: 348px;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    transition-duration: 400ms;
+    max-width: 100%;
+    background-color: $color-white;
+    padding: $all-padding;
+    border-radius: 16px;
+    margin: $all-padding 0;
+    box-shadow:0 4px 9px -7px rgb(0, 0, 0, 0.70);
+    overflow: hidden;
+    cursor: pointer;
+    & h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom: 0;
+        font-size: 1.15rem;
+    }
+    & p {
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 1rem;
+    }
+}
+
+.submenu li:nth-child(1n) {
+    animation-delay: .2s;
+}
+
+ul {
+    animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+    animation-fill-mode: both;
 
 }
 

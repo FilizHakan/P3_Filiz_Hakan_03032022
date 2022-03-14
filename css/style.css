@@ -377,6 +377,10 @@ input::placeholder {
   position: absolute;
 }
 
+#menu {
+  background-color: #f6f6f6;
+}
+
 .head {
   display: block;
   animation: smooth-appearing 750ms backwards;
@@ -402,15 +406,15 @@ input::placeholder {
 }
 
 .hero {
-  max-width: 100%;
-  max-height: 400px;
   align-items: center;
   overflow: hidden;
   position: relative;
-  object-fit: cover;
 }
 .hero img {
+  max-width: 100%;
+  max-height: 400px;
   width: 100%;
+  object-fit: cover;
   filter: brightness(95%);
 }
 
@@ -478,6 +482,11 @@ input::placeholder {
   display: grid;
 }
 
+.submenu li div:first-child {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .submenu {
   max-width: 100%;
   overflow: hidden;
@@ -485,6 +494,7 @@ input::placeholder {
 }
 .submenu__title {
   text-transform: uppercase;
+  margin-top: 25px;
   font-size: 1.17rem;
   position: relative;
   padding-bottom: 0.5rem;
@@ -498,6 +508,46 @@ input::placeholder {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+
+.submenu li {
+  width: 348px;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  transition-duration: 400ms;
+  max-width: 100%;
+  background-color: #ffff;
+  padding: 1rem;
+  border-radius: 16px;
+  margin: 1rem 0;
+  box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  cursor: pointer;
+}
+.submenu li h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0;
+  font-size: 1.15rem;
+}
+.submenu li p {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+.submenu li:nth-child(1n) {
+  animation-delay: 0.2s;
+}
+
+ul {
+  animation: itemAppear 0.6s;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  animation-fill-mode: both;
 }
 
 /*# sourceMappingURL=style.css.map */

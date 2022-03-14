@@ -33,7 +33,7 @@
     <body>
         <header class="head">
             <div class="restaurant__container">
-                <h1 class="header__logo">ohmyfood</h1>
+                <h1 class="header__logo">Ohmyfood</h1>
                 <a href="./index.html"><i class="fas fa-arrow-left head__arrow"></i></a>
             </div>
         </header>
@@ -41,7 +41,7 @@
             <img src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="gastronomic restaurant food plate" class="hero_img">
         </div>
 
-        <main>
+        <main id="menu">
         <!-- Section "La Palette du goût" -->
             <section class="menu">
                 <h2 class="menu__title">Le délice des sens</h2>
@@ -55,23 +55,25 @@
             <section class="submenus">
                 <div class="submenu">
                     <h3 class="submenu__title">Entrées</h3>
-                    <ul class="menuItem__delay">
+                    <ul>
         <!-- Menu item 1 in "Entrées" -->
-                        <li class="menuItem__list">
+                        <li>
                             <div>
-                                <h4 class="menuItem__title">Tartare de thon</h3>
-                                <p class="menuItem__description">Assaisonné au yuzu</p>
+                                <h4>Tartare de thon</h3>
+                                <p>Assaisonné au yuzu</p>
                             </div>
-                            <div class="price__check">25€</div>
+                            <div class="price__check">
+                                <p>25€</p>
+                            </div>
                             <div class="check__icon">
                                 <i class="fa fa-check-circle"></i>
                             </div>
                         </li>
         <!-- Menu item 2 in "Entrées" -->
-                        <li class="menuItem__list">
+                        <li>
                             <div>
-                                <h4 class="menuItem__title">Bouchée de homard croustillant</h4>
-                                <p class="menuItem__description">Et sa farandole de petits légumes</p>
+                                <h4>Bouchée de homard croustillant</h4>
+                                <p>Et sa farandole de petits légumes</p>
                             </div>
                             <div class="price__check">35€</div>
                             <div class="check__icon">
@@ -79,10 +81,10 @@
                             </div>
                         </li>
         <!-- Menu item 3 in "Entrées" -->
-                        <li class="menuItem__list">
+                        <li>
                             <div>
-                                <h4 class="menuItem__title">Velouté de cèpes</h4>
-                                <p class="menuItem__description">Aux truffes</p>
+                                <h4>Velouté de cèpes</h4>
+                                <p>Aux truffes</p>
                             </div>
                             <div class="price-check">20€</div>
                                 <i class="fa fa-check-circle"></i>
@@ -93,12 +95,12 @@
         <!-- Section "Plats" -->
                 <div class="submenu">
                     <h3 class="submenu__title">Plats</h3>
-                    <ul class="menuItem__delay">
+                    <ul>
         <!-- Menu item 1 in "Plats" -->                
-                        <li class="menuItem__list">
+                        <li>
                             <div>
-                                <h4 class="menuItem__title">Poulet rôti aux herbes de Provence</h4>
-                                <p class="menuItem__description">Et sa crème de truffe</p>
+                                <h4>Poulet rôti aux herbes de Provence</h4>
+                                <p>Et sa crème de truffe</p>
                             </div>
                             <div class="price__check">40€</div>
                             <div class="check__icon">
@@ -106,10 +108,10 @@
                             </div>
                         </li>
         <!-- Menu item 2 in "Plats" -->
-                        <li class="menuItem__list">
+                        <li>
                             <div>
-                                <h4 class="menuItem__title">Et sa crème de truffe</h4>
-                                <p class="menuItem__description">Et sa crème de truffe</p>
+                                <h4>Et sa crème de truffe</h4>
+                                <p>Et sa crème de truffe</p>
                             </div>
                             <div class="price__check">35€</div>
                             <div class="check__icon">
@@ -117,10 +119,10 @@
                             </div>
                         </li>
         <!-- Menu item 3 in "Plats" -->
-                        <li class="menuItem__list">
+                        <li>
                             <div>
-                                <h4 class="menuItem__title">Côte de boeuf Angus</h4>
-                                <p class="menuItem__description">Et sa purée de panais</p>
+                                <h4>Côte de boeuf Angus</h4>
+                                <p>Et sa purée de panais</p>
                             </div>
                             <div class="price-check"> 44€</div>
                                 <i class="fa fa-check-circle"></i>
@@ -131,12 +133,12 @@
         <!-- Section "Desserts" -->
                 <div class="submenu">
                     <h3 class="submenu__title">Desserts</h3>
-                    <ul class="menuItem__delay">
+                    <ul>
         <!-- Menu item 1 in "Desserts" -->                
                         <li class="menuItem__list">
                             <div>
-                                <h4 class="menuItem__title">Farandole de desserts</h4>
-                                <p class="menuItem__description">Du chef</p>
+                                <h4>Farandole de desserts</h4>
+                                <p>Du chef</p>
                             </div>
                             <div class="price__check">18€</div>
                             <div class="check__icon">
@@ -144,10 +146,10 @@
                             </div>
                         </li>
         <!-- Menu item 2 in "Desserts" -->
-                        <li class="menuItem__list">
+                        <li>
                             <div>
-                                <h4 class="menuItem__title">Crème brulée</h4>
-                                <p class="menuItem__description">Revisité</p>
+                                <h4>Crème brulée</h4>
+                                <p>Revisité</p>
                             </div>
                             <div class="price__check">22€</div>
                             <div class="check__icon">
@@ -155,10 +157,10 @@
                             </div>
                         </li>
         <!-- Menu item 3 in "Desserts" -->
-                        <li class="menuItem__list">
+                        <li>
                             <div>
-                                <h4 class="menuItem__title">Tiramisu</h4>
-                                <p class="menuItem__description">À la noisette</p>
+                                <h4>Tiramisu</h4>
+                                <p>À la noisette</p>
                             </div>
                             <div class="price-check">23€</div>
                                 <i class="fa fa-check-circle"></i>
