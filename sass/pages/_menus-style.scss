@@ -149,7 +149,7 @@
     & h4 {
         text-overflow: ellipsis;
         overflow: hidden;
-        margin-bottom: 0;
+        margin: 0;
         font-size: 1.15rem;
     }
     & p {
@@ -158,6 +158,21 @@
         text-overflow: ellipsis;
         overflow: hidden;
         font-size: 1rem;
+    }
+    & .price__check p {
+        align-self: flex-end;
+        font-weight: 900;
+        line-height: 1rem;
+        margin-left: 5px;
+        margin-right: 25px;
+    }
+
+    & .price__check {
+        display: flex;
+        flex-flow: row;
+        padding: 0;
+        margin-right: -61px;
+        transition: 500ms;
     }
 }
 
@@ -171,6 +186,10 @@ ul {
     animation-fill-mode: both;
 
 }
+
+
+
+
 
 
 
