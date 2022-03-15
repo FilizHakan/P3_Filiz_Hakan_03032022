@@ -127,7 +127,7 @@
     box-shadow: $shadow-heading;
     &:hover {
         margin-right: 0px;
-        transition-duration: 800ms;
+        transition-duration: 500ms;
         box-shadow: $shadow-button-hover;
     }
     & h4 {

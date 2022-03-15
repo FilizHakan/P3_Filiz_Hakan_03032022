@@ -449,6 +449,10 @@ input::placeholder {
   box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
   border-radius: 15px;
 }
+.card:hover {
+  box-shadow: 0px 7px 15px 0px #0000003b;
+  transition-duration: 500ms;
+}
 .card__img {
   height: 12rem;
   width: 100%;
@@ -457,20 +461,6 @@ input::placeholder {
   object-fit: cover;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-}
-.card__img .label::after {
-  display: block;
-  content: "Nouveau";
-  color: #278870;
-  position: absolute;
-  top: 14px;
-  right: 12px;
-  border-radius: 0.125rem;
-  background-color: #99E2D0;
-  padding: 7px 12px;
-  font-family: "roboto", sans-serif;
-  font-size: 0.85em;
-  box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
 }
 .card__title {
   margin: 0;
@@ -510,6 +500,22 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   position: absolute;
+}
+
+/*"Nouveau" LABEL TAG ON TWO FIRST HOMEPAGE CARDS*/
+.label::after {
+  content: "Nouveau";
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+  border-radius: 0.125rem;
+  color: #278870;
+  background-color: #99E2D0;
+  padding: 0.5rem;
+  font-family: "roboto", sans-serif;
+  font-size: 0.85em;
+  box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
 }
 
 #menu {
@@ -701,7 +707,7 @@ input::placeholder {
 }
 .submenu li:hover {
   margin-right: 0px;
-  transition-duration: 800ms;
+  transition-duration: 500ms;
   box-shadow: 0px 7px 15px 0px #0000003b;
 }
 .submenu li h4 {

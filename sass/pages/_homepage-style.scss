@@ -100,12 +100,13 @@
     margin-top: 1rem;
     box-shadow: $shadow-heading;
     border-radius: 15px;
+    &:hover {
+        box-shadow: $shadow-button-hover;
+        transition-duration: 500ms;
+    }
 
     &__img {
         @include card-img;
-        .label::after {
-            @include label-new;
-        }
     }
 
 
@@ -140,4 +141,8 @@
     }
 }
 
+/*"Nouveau" LABEL TAG ON TWO FIRST HOMEPAGE CARDS*/
+.label::after {
+    @include label-new;
+}
 

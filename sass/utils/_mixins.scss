@@ -91,18 +91,18 @@
 /*** MIXINS***/
 
   @mixin label-new {
-    display: block;
     content: "Nouveau";
-    color: #278870;
+    display: block;
     position: absolute;
-    top: 14px;
-    right: 12px;
+    top: 1rem;
+    right: .75rem;
     border-radius: .125rem;
-    background-color: #99E2D0;
-    padding: 7px 12px;
+    color: $color-tertiary-dark;
+    background-color: $color-tertiary;
+    padding: .5rem;
     font-family: $content-font;
     font-size: .85em;
-    box-shadow: 0 4px 9px -7px rgb(0, 0, 0, 0.7);
+    box-shadow: $shadow-heading;
 
   }
 
