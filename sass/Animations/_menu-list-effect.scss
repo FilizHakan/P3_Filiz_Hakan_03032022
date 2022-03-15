@@ -1,11 +1,11 @@
-.submenu li{
-    -webkit-animation: list-effect 500ms normal backwards ease-in-out;
-            animation: list-effect 800ms normal backwards ease-in-out;
+.submenu ul li{
+    -webkit-animation: list-effect 1200ms normal backwards ease-in-out;
+            animation: list-effect 1200ms normal backwards ease-in-out;
 
 }
 
 @for $i from 1 through 4 {
-    article li:nth-child(#{$i}n) {
+    .submenu ul li:nth-child(#{$i}n) {
         -webkit-animation-delay: #{$i * 0.2}s;
                 animation-delay: #{$i * 0.2}s;
 

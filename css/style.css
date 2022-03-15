@@ -140,27 +140,27 @@ ul {
   list-style-type: none;
 }
 
-.submenu li {
-  -webkit-animation: list-effect 500ms normal backwards ease-in-out;
-  animation: list-effect 800ms normal backwards ease-in-out;
+.submenu ul li {
+  -webkit-animation: list-effect 1200ms normal backwards ease-in-out;
+  animation: list-effect 1200ms normal backwards ease-in-out;
 }
 
-article li:nth-child(1n) {
+.submenu ul li:nth-child(1n) {
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
 
-article li:nth-child(2n) {
+.submenu ul li:nth-child(2n) {
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
 
-article li:nth-child(3n) {
+.submenu ul li:nth-child(3n) {
   -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
-article li:nth-child(4n) {
+.submenu ul li:nth-child(4n) {
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
@@ -256,7 +256,7 @@ button {
 }
 button:hover {
   background-color: #ffff;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.7);
 }
 
 .maps {
@@ -565,7 +565,7 @@ input::placeholder {
 }
 @media screen and (min-width: 1024px) {
   .hero img {
-    height: 350px;
+    height: 500px;
   }
 }
 
@@ -579,6 +579,7 @@ input::placeholder {
 }
 .menu-cards .card:hover {
   box-shadow: 0px 7px 15px 0px #0000003b;
+  transition-duration: 400ms;
 }
 
 .menu {
@@ -689,15 +690,19 @@ input::placeholder {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  transition-duration: 400ms;
   max-width: 100%;
   background-color: #ffff;
   padding: 1rem;
   border-radius: 16px;
   margin: 1rem 0;
-  box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
+}
+.submenu li:hover {
+  margin-right: 0px;
+  transition-duration: 800ms;
+  box-shadow: 0px 7px 15px 0px #0000003b;
 }
 .submenu li h4 {
   text-overflow: ellipsis;
@@ -717,14 +722,13 @@ input::placeholder {
   flex-flow: row;
   padding-right: 1rem;
   margin-right: -100px;
-  transition: 500ms;
 }
 .submenu li .price__check i {
   align-self: center;
   background-color: #99E2D0;
   padding: 11px 4px;
 }
-.submenu li .price__check i:before {
+.submenu li .price__check i::before {
   font-size: 1.05rem;
   color: #ffff;
   display: inline-block;

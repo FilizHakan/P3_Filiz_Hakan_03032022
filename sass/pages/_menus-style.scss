@@ -43,6 +43,7 @@
     transition-duration: 400ms;
         &:hover {
             box-shadow: $shadow-button-hover;
+            transition-duration: 400ms;
         }
     }
 
@@ -115,16 +116,20 @@
     list-style-type: none;
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
-    transition-duration: 400ms;
+    justify-content: space-between;   
     max-width: 100%;
     background-color: $color-white;
     padding: $all-padding;
     border-radius: 16px;
     margin: $all-padding 0;
-    box-shadow:0 4px 9px -7px rgb(0, 0, 0, 0.70);
     overflow: hidden;
     cursor: pointer;
+    box-shadow: $shadow-heading;
+    &:hover {
+        margin-right: 0px;
+        transition-duration: 800ms;
+        box-shadow: $shadow-button-hover;
+    }
     & h4 {
         text-overflow: ellipsis;
         overflow: hidden;
@@ -143,14 +148,13 @@
         flex-flow: row;
         padding-right: 1rem;
         margin-right: -100px;
-        transition: 500ms;
         & i {
             align-self: center;
             background-color: $color-tertiary;
             padding: 11px 4px;
-            &:before {
+            &::before {
                 font-size: 1.05rem;
-                color:$color-white;
+                color: $color-white;
                 display: inline-block;
                 margin: 0 15px;
                 border-radius: 100px;
