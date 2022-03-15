@@ -94,12 +94,13 @@
 
 .card {
     position: relative;
+    background-color: $color-white;
     text-decoration: none;
     color: inherit;
     display: block;
     margin-top: 1rem;
     box-shadow: $shadow-heading;
-    border-radius: 15px;
+    border-radius: 1rem;
     &:hover {
         box-shadow: $shadow-button-hover;
         transition-duration: 500ms;
@@ -108,7 +109,6 @@
     &__img {
         @include card-img;
     }
-
 
     &__title {
         margin: 0;
@@ -134,14 +134,31 @@
 
     &__btn {
         @include card-btn;
+        &:hover::before {
+            opacity: 1;
+        }
     }
 
     &__heart {
         @include card-heart;
     }
+
+    &__btn:hover {
+        .card__heart {
+            &--plain {
+                opacity: 0;
+                color: $color-bd-light;
+            &--full {
+                opacity: 1;
+                z-index: 2;
+            }
+            }
+        }
+    }
 }
 
 /*"Nouveau" LABEL TAG ON TWO FIRST HOMEPAGE CARDS*/
+
 .label::after {
     @include label-new;
 }

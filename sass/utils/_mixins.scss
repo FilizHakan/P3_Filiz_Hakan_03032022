@@ -107,25 +107,28 @@
   }
 
   @mixin card-btn {
-    height: 2rem;
-    position: relative;
+    position: absolute;
     align-items: center;
     cursor: pointer;
     justify-content: center;
     display: flex;
     right:30px;
-    bottom:0px;
+    bottom:30px;
   }
 
   @mixin card-heart {
     font-size: 28px;
-    color:rgb(0, 0, 0, 0.6);
     font-weight: 300;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     transition-duration: .25s;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
+    background-color: $color-bd-light;
   }
 
   @mixin card-img {

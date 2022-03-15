@@ -442,12 +442,13 @@ input::placeholder {
 
 .card {
   position: relative;
+  background-color: #ffff;
   text-decoration: none;
   color: inherit;
   display: block;
   margin-top: 1rem;
   box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
-  border-radius: 15px;
+  border-radius: 1rem;
 }
 .card:hover {
   box-shadow: 0px 7px 15px 0px #0000003b;
@@ -482,24 +483,38 @@ input::placeholder {
   flex: 1;
 }
 .card__btn {
-  height: 2rem;
-  position: relative;
+  position: absolute;
   align-items: center;
   cursor: pointer;
   justify-content: center;
   display: flex;
   right: 30px;
-  bottom: 0px;
+  bottom: 30px;
+}
+.card__btn:hover::before {
+  opacity: 1;
 }
 .card__heart {
   font-size: 28px;
-  color: rgba(0, 0, 0, 0.6);
   font-weight: 300;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   transition-duration: 0.25s;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
+  background-color: #f6f6f6;
+}
+.card__btn:hover .card__heart--plain {
+  opacity: 0;
+  color: #f6f6f6;
+}
+.card__btn:hover .card__heart--plain--full {
+  opacity: 1;
+  z-index: 2;
 }
 
 /*"Nouveau" LABEL TAG ON TWO FIRST HOMEPAGE CARDS*/
