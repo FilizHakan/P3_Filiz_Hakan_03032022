@@ -141,28 +141,28 @@ ul {
 }
 
 .submenu ul li {
-  -webkit-animation: list-effect 1200ms normal backwards ease-in-out;
-  animation: list-effect 1200ms normal backwards ease-in-out;
+  -webkit-animation: list-effect 1000ms normal backwards ease-in-out;
+  animation: list-effect 1000ms normal backwards ease-in-out;
 }
 
 .submenu ul li:nth-child(1n) {
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .submenu ul li:nth-child(2n) {
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 .submenu ul li:nth-child(3n) {
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 
 .submenu ul li:nth-child(4n) {
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 @-webkit-keyframes list-effect {
@@ -713,7 +713,7 @@ input::placeholder {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  max-width: 100%;
+  width: 348px;
   background-color: #ffff;
   padding: 1rem;
   border-radius: 16px;
@@ -721,10 +721,9 @@ input::placeholder {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 4px 9px -7px rgba(0, 0, 0, 0.7);
+  transition-duration: 500ms;
 }
 .submenu li:hover {
-  margin-right: 0px;
-  transition-duration: 500ms;
   box-shadow: 0px 7px 15px 0px #0000003b;
 }
 .submenu li h4 {
@@ -732,6 +731,10 @@ input::placeholder {
   overflow: hidden;
   margin: 0;
   font-size: 1.15rem;
+}
+.submenu li div:first-child {
+  overflow: hidden;
+  white-space: nowrap;
 }
 .submenu li p {
   margin: 0;
@@ -759,7 +762,7 @@ input::placeholder {
   border-radius: 100px;
 }
 .submenu li .price__check i:hover {
-  transform: rotate(-1turn);
+  transform: rotate(0turn);
   transition-duration: 0.5ms;
 }
 .submenu li .price__check p {

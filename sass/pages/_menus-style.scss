@@ -83,6 +83,10 @@
       }
 }
 
+.submenu li div:first-child {
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 .submenu {
     max-width: 100%;
@@ -100,18 +104,72 @@
             bottom: 0;
         }
     }
+}
 
-    &li {
-        @include submenu-li;
+.submenu li {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 348px;
+    background-color: $color-white;
+    padding: $all-padding;
+    border-radius: 16px;
+    margin: $all-padding 0;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: $shadow-heading;
+    transition-duration: 500ms;
+    &:hover {
+        box-shadow: $shadow-button-hover;
+    }
+    & h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: 0;
+        font-size: 1.15rem;
+    }
+    & div:first-child {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    & p {
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 1rem;
+    }
     & .price__check {
-        @include price-check;
+        display: flex;
+        flex-flow: row;
+        padding-right: 1rem;
+        margin-right: -100px;
+        & i {
+            align-self: center;
+            background-color: $color-tertiary;
+            padding: 11px 4px;
+            &::before {
+                font-size: 1.05rem;
+                color: $color-white;
+                display: inline-block;
+                margin: 0 15px;
+                border-radius: 100px;
+            }
+            &:hover {
+                transform: rotate(0turn);
+                transition-duration: 0.5ms;
+            }
+        }
+        & p {
+            align-self: flex-end;
+            font-weight: 700;
+            line-height: 1rem;
+            margin-left: 5px;
+            margin-right: 25px;
+    }
     }
 
-    &:hover i:before {
-        transform: rotate(0turn);
-        transition-duration: 500ms;
-    }
-    }
 }
 
 .menu__button {
@@ -119,3 +177,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+    
+
