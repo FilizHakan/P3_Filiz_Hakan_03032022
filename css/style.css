@@ -151,49 +151,27 @@ ul {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  animation: loader 7s forwards;
+  animation: loader 4s forwards;
   pointer-events: none;
 }
-.loader__container {
-  width: 2em;
-  height: 2em;
+.loader__image {
+  width: 10em;
+  height: 10em;
   font-size: 25px;
   box-sizing: border-box;
-  border-top: 0.3em solid #FF79DA;
+  border-top: 0.3em solid transparent;
   border-radius: 50%;
   position: relative;
-  animation: rotating 8s ease-in-out infinite;
-  --direction: 6;
-}
-.loader__container::before {
-  border-top: 0.3em solid #9356DC;
-  transform: rotate(120deg);
-}
-.loader__container::after {
-  border-top: 0.3em solid #99E2D0;
-  transform: rotate(240deg);
-}
-.loader__container::before .loader__container::after {
-  content: "";
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  border-radius: 50%;
-  box-sizing: border-box;
-  top: -0.2em;
+  animation: rotating 2s ease-in-out infinite;
+  --direction: 1;
 }
 .loader__item {
-  font-size: 25px;
-}
-.loader span {
-  font-family: "Shrikhand";
   position: absolute;
   color: black;
-  width: inherit;
-  height: inherit;
+  width: 10rem;
+  height: 10rem;
   text-align: center;
-  line-height: 10em;
-  font-family: sans-serif;
+  line-height: 1em;
   animation: rotating 2s linear infinite;
   --direction: -1;
 }
