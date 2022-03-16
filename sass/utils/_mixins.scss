@@ -155,36 +155,49 @@
     background-color: $color-bd-light;
 }
 
-@mixin heart-first {
-    font-size: 1.85rem;
-    transform: scaleY(1.02);
-    position: relative;
-    z-index: 1;
-    font-weight: 100!important;
-    transition: 400ms;
-    cursor: pointer;
-    color: $color-bd-footer;
+@mixin card-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
 }
 
-@mixin heart-second {
-    font-size: 1.35rem;
-    transform: scaleY(1.02);
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    font-weight: 900!important;
-    background: rgb(147,86,220);
-    background: -webkit-linear-gradient(300deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1); 
-    -webkit-background-clip: text; 
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: -1;
-    opacity: 0;
-    transition: 600ms;
+@mixin menu-heart {
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
+
+@mixin second-heart {
+  font-size: 1.85rem;
+  transform: scaleY(1.02);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  font-weight: 900!important;
+  background: rgb(147,86,220);
+  background: -webkit-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+  filter: progid:DXImageTransform.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
+  transition: 600ms;
+  opacity: 0;
+}  
+
+@mixin first-heart {
+  z-index: 1;
+  font-size: 1.85rem;
+  transform: scaleY(1.02);
+  position: relative;
+  font-weight: 100!important;
+  transition: 400ms;
+  cursor: pointer;
+  color: $color-bd-footer;
+  }  
+  
 
 @mixin submenu-title {
     text-transform: uppercase;

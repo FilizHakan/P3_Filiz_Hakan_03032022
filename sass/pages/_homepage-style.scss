@@ -134,27 +134,21 @@
 
     &__btn {
         @include card-btn;
-        &:hover::before {
-            opacity: 1;
-        }
     }
+}
 
-    &__heart {
-        @include card-heart;
-    }
+.firstheart {
+    @include first-heart;
+    &:hover {
+        color: $color-bd-light;
+    & .secondheart {
+        opacity: 1;
+        z-index: 2;
+      }}
+}
 
-    &__btn:hover {
-        .card__heart {
-            &--plain {
-                opacity: 0;
-                color: $color-bd-light;
-            &--full {
-                opacity: 1;
-                z-index: 2;
-            }
-            }
-        }
-    }
+.secondheart {
+    @include second-heart;
 }
 
 /*"Nouveau" LABEL TAG ON TWO FIRST HOMEPAGE CARDS*/

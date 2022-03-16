@@ -60,23 +60,17 @@
         position: relative;
     }
 
-    .heart {
+    &__heart {
         position: absolute;
         top: 45px;
         right: 33px;
         color: $color-bd-footer;
         &__first {
-            @include heart-first;
-            &:hover{
-            color: $color-bd-light;
-            &.heart__second{
-            opacity: 1;
-            z-index: 2; 
-            }}
+            @include first-heart;
         }
     
         &__second {
-            @include heart-second;
+            @include second-heart;
         }
     }
 } 
