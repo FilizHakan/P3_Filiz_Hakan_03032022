@@ -223,3 +223,27 @@
     }
     }
   }
+
+  @mixin submenu-li {
+    list-style-type: none;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        max-width: 100%;
+        background-color: $color-white;
+        border-radius: 16px;
+        margin: $all-padding 0;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: $shadow-heading;
+        transition-duration: 400ms;
+        &:hover {
+            box-shadow: $shadow-button-hover;
+            & .price__check {
+                margin-right: 0;
+            }
+            & i:before {
+                transform: rotate(0);
+                transition-duration: 500ms;
+            }}
+  }

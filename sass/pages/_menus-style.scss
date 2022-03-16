@@ -103,31 +103,11 @@
             left: 0;
             bottom: 0;
         }
-    }
+    }    
 
     & li {
-        list-style-type: none;
-        display: flex;
-        flex-flow: row;
-        justify-content: space-between;
-        max-width: 100%;
-        background-color: $color-white;
-        border-radius: 16px;
-        margin: $all-padding 0;
-        overflow: hidden;
-        cursor: pointer;
-        box-shadow: $shadow-heading;
-        transition-duration: 400ms;
-        &:hover {
-            box-shadow: $shadow-button-hover;
-            & .price__check {
-                margin-right: 0;
-            }
-            & i:before {
-                transform: rotate(0);
-                transition-duration: 500ms;
-            }
-        }
+        @include submenu-li;
+    }
 
         & h4 {
             text-overflow: ellipsis;
@@ -146,7 +126,7 @@
             font-size: 1rem;
             padding: 3px 0px 11px 11px;
         }
-    }
+    
 }
 
 .price__check {

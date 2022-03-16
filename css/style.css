@@ -140,6 +140,78 @@ ul {
   list-style-type: none;
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: loader 7s forwards;
+  pointer-events: none;
+}
+.loader__container {
+  width: 2em;
+  height: 2em;
+  font-size: 25px;
+  box-sizing: border-box;
+  border-top: 0.3em solid #FF79DA;
+  border-radius: 50%;
+  position: relative;
+  animation: rotating 8s ease-in-out infinite;
+  --direction: 6;
+}
+.loader__container::before {
+  border-top: 0.3em solid #9356DC;
+  transform: rotate(120deg);
+}
+.loader__container::after {
+  border-top: 0.3em solid #99E2D0;
+  transform: rotate(240deg);
+}
+.loader__container::before .loader__container::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  box-sizing: border-box;
+  top: -0.2em;
+}
+.loader__item {
+  font-size: 25px;
+}
+.loader span {
+  font-family: "Shrikhand";
+  position: absolute;
+  color: black;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 10em;
+  font-family: sans-serif;
+  animation: rotating 2s linear infinite;
+  --direction: -1;
+}
+@keyframes rotating {
+  50% {
+    transform: rotate(calc(180deg * var(--direction)));
+  }
+  100% {
+    transform: rotate(calc(360deg * var(--direction)));
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 .submenu ul li {
   -webkit-animation: list-effect 1000ms normal backwards ease-in-out;
   animation: list-effect 1000ms normal backwards ease-in-out;
@@ -731,17 +803,17 @@ input::placeholder {
   transform: rotate(0);
   transition-duration: 500ms;
 }
-.submenu li h4 {
+.submenu h4 {
   text-overflow: ellipsis;
   overflow: hidden;
   padding: 14px 0px 0px 11px;
   font-size: 1.15rem;
 }
-.submenu li div:first-child {
+.submenu div:first-child {
   overflow: hidden;
   white-space: nowrap;
 }
-.submenu li p {
+.submenu p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
