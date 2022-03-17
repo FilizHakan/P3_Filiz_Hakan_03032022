@@ -10,25 +10,6 @@
         margin-right: 10rem; 
     }
 }
- .head {
-    display: block;
-    margin-top: $all-padding;
-    @include screenLarge {
-        margin-top: $all-padding;
-    }
-
-    &__arrow::before {
-        position: absolute;
-        left: 23px;
-        top: 30px;
-        font-size: 1.2rem;
-        text-align: left;
-        @include screenLarge {
-            top: 30px;
-        
-        }
-    }
-}
 
 .hero {
     @include hero;

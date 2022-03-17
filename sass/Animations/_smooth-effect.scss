@@ -1,23 +1,33 @@
 /* HOMEPAGE "Ohmyfood" SMOOTH HEADER EFFECT */
 
-.header {
+.head {
     animation: smooth-effect 2s backwards;
-    animation-delay: 2.2s; 
+    animation-delay: 2500ms; 
 }
 
-/* MENU PAGE "Ohmyfood" & IMAGE HERO SMOOTH HEADER EFFECT */
-.head {
-    animation: smooth-effect 750ms backwards;
+.header {
+    animation: smooth-effect 2s backwards;
     animation-delay: 250ms;
 }
 
+/* MENU PAGE "Ohmyfood" & IMAGE HERO SMOOTH HEADER EFFECT */
 .hero img {
     animation: smooth-effect 750ms backwards;
     animation-delay: 250ms;
 }
 
+.menu__title {
+    animation: smooth-effect 750ms backwards;
+    animation-delay: 250ms;
+}
+
 .submenu li:nth-child(1n) {
-    animation-delay: .5s;
+    animation-delay: 3s;
+}
+
+.submenu__title {
+  animation: subtitles 800ms both ease-out;
+  animation-delay: 1s;
 }
 
 /* HOMEPAGE & MENUS BODY SMOOTH EFFECT */
@@ -27,17 +37,17 @@
     animation-delay: 2500ms;
 }
 
-.main-section-menu {
-    animation: smooth-effect 1015ms backwards;
-    animation-delay: 250ms;
-  }
-
-@keyframes smooth-effect {
+  @keyframes smooth-effect {
     from {
       opacity: 0;
-    }
+      transform: translateY(1rem); }
     to {
       opacity: 1;
-    }
-  }
+      transform: translateY(0); } }
+
+  @keyframes subtitles {
+    from {
+      left: -50rem; }
+    to {
+      left: 0; } }
 

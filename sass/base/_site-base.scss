@@ -13,14 +13,37 @@
 
   /* HEADER */
   .header {
-    padding: $all-padding;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    display: flex;
     position: relative;
-    z-index: 10;
-    text-align: center;
-  
-    &__logo{
+    justify-content: center;
+    padding: 5px;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    @include screenLarge {
+      margin-top: $all-padding;
+    }
+    &__logo {
       @include header-logo;
+    }
+
+    a  {
+      top: 10px;
+      left: 20px;
+      font-size: 1.3em;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      transition: background-color 500ms ease-out;
+      border-radius: 50%;   
+      color: lighten(#000, 20%);
+    }
+
+    a:hover {
+      background-color: lighten(#000, 95%);
+      transition: background-color 500ms ease-out;
+      color: lighten(#000, 30%);
     }
   }
 
@@ -89,11 +112,7 @@
     margin: auto;
     position: relative;
   }
-a {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
+
 h3 {
   font-size: 1.5rem;
 }
@@ -111,6 +130,12 @@ h2, h3, h4, p, span, a, li, button, ::placeholder{
     font-family: $content-font, sans-serif;
     color: black;
 }
+
+ a {
+  text-decoration: none;
+  color: black;
+ }
+ 
 
 section {
     display: block;

@@ -30,7 +30,7 @@
 
   @mixin header-logo {
     font-family: $title-font, "cursive";
-    margin: 0;
+    margin: 10px;
     text-align: center;
   }
 
@@ -84,7 +84,7 @@
     font-size: 1.1rem;
     border-radius: 100px;
     color: white;
-    transition-duration: 0.25s;
+    transition: filter 800ms ease-in-out 0s;
     box-shadow: $shadow-box;
   }
 
@@ -168,7 +168,7 @@
 }
 
 @mixin second-heart {
-  font-size: 1.85rem;
+  font-size: 1.87rem;
   transform: scaleY(1.02);
   position: absolute;
   right: 0;
@@ -183,7 +183,7 @@
           background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: -1;
-  transition: 600ms;
+  transition: 4s;
   opacity: 0;
 }  
 

@@ -78,7 +78,14 @@
     background: $color-bd-light;
 
     &__title {
-    padding: $all-padding 0;  
+    padding: $all-padding 0;
+    @include screenXLarge {
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    @include screenMedium {
+        padding: 0;
+    }  
     }
 }
 
@@ -101,6 +108,7 @@
     margin-top: 1rem;
     box-shadow: $shadow-heading;
     border-radius: 1rem;
+    background:-webkit-linear-gradient(top,rgba(255,255,255,0.1),transparent);
     &:hover {
         box-shadow: $shadow-button-hover;
         transition-duration: 500ms;
@@ -125,7 +133,7 @@
     }
 
     &__content {
-        padding: $all-padding;
+        padding: 0.5rem $all-padding $all-padding $all-padding;
         position: relative;
         align-items: center;
         background-color: $color-white;
@@ -155,5 +163,15 @@
 
 .label::after {
     @include label-new;
+    animation: clignote 3s linear infinite;
+}
+
+@keyframes clignote {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
