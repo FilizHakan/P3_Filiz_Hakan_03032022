@@ -1,8 +1,13 @@
 /* HOMEPAGE "Ohmyfood" HEADER AND FOOTER SMOOTH EFFECT */
 
-.header {
-    animation: smooth-effect 2s backwards;
-    animation-delay: 250ms;
+.head {
+  animation: smooth-effect 2s backwards;
+  animation-delay: 250ms;
+}
+
+.header__logo {
+  animation: smooth-effect 5s backwards;
+  animation-delay: 250ms;
 }
 
 .footer {
