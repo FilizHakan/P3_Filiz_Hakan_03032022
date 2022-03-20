@@ -14,7 +14,7 @@
 /***HOME PAGE MIXINS***/
 /***SECTION STEPS MIXINS***/
 /***BUTTON "Explorer nos restaurants" + "Commander" MIXINS***/
-/*** MIXINS***/
+/*** MIXINS CARDS ***/
 /***MENU MIXINS***/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 /* BOX-SIZING PROPERTY */
@@ -323,13 +323,14 @@ ul {
     left: 0;
   }
 }
-/*BUILT-IN SASS MODULE, GENERATE COLORS BASED ON EXISTING ONES*/
-button {
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
   align-self: center;
   width: fit-content;
-  margin: 15px 0 38px 0;
   cursor: pointer;
-  background-color: #686868;
   position: relative;
   z-index: 1;
   border: 0;
@@ -338,12 +339,11 @@ button {
   font-size: 1.1rem;
   border-radius: 100px;
   color: white;
-  transition: filter 800ms ease-in-out 0s;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(#9356DC, #FF79DA);
   transition: all 0.3s ease-in-out 0s;
 }
-button:hover, button:focus {
+.button:hover, .button:focus {
   background-color: #ffff;
   filter: brightness(1.2);
   transition: filter 300ms linear;
@@ -621,7 +621,6 @@ input::placeholder {
   font-weight: 900 !important;
   background: #9356dc;
   background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
-  filter: progid:DXImageTransform.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -752,7 +751,6 @@ input::placeholder {
   font-weight: 900 !important;
   background: #9356dc;
   background: -webkit-linear-gradient(350deg, #9356dc 0%, #ff79da 100%);
-  filter: progid:DXImageTransform.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -867,13 +865,6 @@ input::placeholder {
   line-height: 1rem;
   margin-left: 5px;
   margin-right: 25px;
-}
-
-.menu__button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
 }
 
 h4 {

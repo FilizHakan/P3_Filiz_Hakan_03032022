@@ -1,7 +1,5 @@
-/*BUILT-IN SASS MODULE, GENERATE COLORS BASED ON EXISTING ONES*/
-@use "sass:color";
 
-button {
+.button {
     @include button;
     background-image: linear-gradient($color-primary, $color-secondary);
     transition: all .3s ease-in-out 0s;
@@ -17,3 +15,6 @@ button {
     }
   
   }
+
+ 
+

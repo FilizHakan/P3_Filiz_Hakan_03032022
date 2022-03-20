@@ -71,11 +71,13 @@
 
   /***BUTTON "Explorer nos restaurants" + "Commander" MIXINS***/
   @mixin button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
     align-self: center;
     width: fit-content;
-    margin: 15px 0 38px 0;
     cursor: pointer;
-    background-color: rgb(104, 104, 104);
     position: relative;
     z-index: 1;
     border: 0;
@@ -84,11 +86,10 @@
     font-size: 1.1rem;
     border-radius: 100px;
     color: white;
-    transition: filter 800ms ease-in-out 0s;
     box-shadow: $shadow-box;
   }
 
-/*** MIXINS***/
+/*** MIXINS CARDS ***/
 
   @mixin label-new {
     content: "Nouveau";
@@ -178,7 +179,6 @@
   font-weight: 900!important;
   background: rgb(147,86,220);
   background: -webkit-linear-gradient(350deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-  filter: progid:DXImageTransform.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
