@@ -174,7 +174,7 @@ ul {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  animation: loader 4s forwards;
+  animation: loader 7s forwards;
   pointer-events: none;
 }
 .loader__image {
@@ -185,7 +185,7 @@ ul {
   border-top: 0.3em solid transparent;
   border-radius: 50%;
   position: relative;
-  animation: rotating 2s ease-in-out infinite;
+  animation: rotating 7s ease-in-out infinite;
   --direction: 1;
 }
 .loader__item {
@@ -208,6 +208,9 @@ ul {
 }
 
 @keyframes loader {
+  30% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
     z-index: -10;
@@ -269,14 +272,14 @@ ul {
   }
 }
 /* HOMEPAGE "Ohmyfood" SMOOTH HEADER EFFECT */
-.head {
-  animation: smooth-effect 2s backwards;
-  animation-delay: 2500ms;
-}
-
 .header {
   animation: smooth-effect 2s backwards;
   animation-delay: 250ms;
+}
+
+.footer {
+  animation: smooth-effect 2s backwards;
+  animation-delay: 2500ms;
 }
 
 /* MENU PAGE "Ohmyfood" & IMAGE HERO SMOOTH HEADER EFFECT */
