@@ -20,7 +20,12 @@
 }
 
 .menu__title {
-    animation: smooth-effect 750ms backwards;
+    animation: smooth-effect 900ms backwards;
+    animation-delay: 250ms;
+}
+
+.firstheart {
+    animation: smooth-effect 1000ms backwards;
     animation-delay: 250ms;
 }
 
