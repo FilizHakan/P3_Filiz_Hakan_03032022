@@ -1,3 +1,4 @@
+/*IMPORT SASS PARTIALS*/
 /*COLORS*/
 /*GRAPHIC CHARTER AND VARIANTS COLORS*/
 /*ICON AND WHITE COLORS*/
@@ -17,7 +18,7 @@
 /*** MIXINS CARDS ***/
 /***MENU MIXINS***/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-/* BOX-SIZING PROPERTY */
+/* BODY & HTML */
 body, html {
   margin: 0;
   padding: 0;
@@ -223,6 +224,7 @@ ul {
   animation: list-effect 1000ms normal backwards ease-in-out;
 }
 
+/*Boucle pour la liste menu*/
 .submenu ul li:nth-child(1n) {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;

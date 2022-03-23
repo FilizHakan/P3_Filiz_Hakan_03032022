@@ -4,6 +4,7 @@
 
 }
 
+/*Boucle pour la liste menu*/
 @for $i from 1 through 4 {
     .submenu ul li:nth-child(#{$i}n) {
         -webkit-animation-delay: #{$i * 0.5}s;
