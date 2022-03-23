@@ -70,16 +70,47 @@
       }
     }
 
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      padding: $all-padding;
+      @include screenXLarge {
+        align-items: center;
+    } 
+    }
+
+    &__logo {
+    color: white;
+    font-family: $title-font, "cursive";
+    padding: $all-padding 0;
+    font-size: 1.5rem;
+    }
+
+    &__item {
+      list-style:none;
+      padding: 0;
+      margin: 0.5rem 0; 
+    }
+
+    &__link {
+      color: $color-white;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__icon {
+      width: 1.2rem;
+      margin-right: 0.6rem;
+    }
+  }
+
   .flex-container {
-    display: flex;
-    flex-direction: column;
-    padding: $all-padding;
     max-width: 1400px;
     margin: auto;
     position: relative;
-    @include screenXLarge {
-      align-items: center;
-  } 
   }
 
 h3 {
